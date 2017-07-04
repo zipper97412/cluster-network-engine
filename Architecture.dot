@@ -1,0 +1,33 @@
+digraph Archi {
+  rankdir=LR
+  app [color=green, label="Application", shape=box];
+  {
+    node [group=clients];
+    C1, C2 [color=red, label=C];
+    edge [style=invis];
+    #C1->C2
+  }
+  {
+    node [group=obj];
+    o1, o2, o3, o4, o5 [color=blue, label=obj, shape=box];
+    edge [style=invis];
+    #o1 -> o2 -> o3 -> o4 -> o5;
+  }
+  o1, o2, o3, o4, o5 [color=blue, label=obj, shape=box];
+  app -> o1 -> C1;
+  app -> o2 -> C1;
+  app -> o3 -> C1;
+  o3 -> C2;
+  app -> o4 -> C2;
+  app -> o5 -> C2;
+  {
+    edge [color=red];
+    C1 -> app;
+    C2 -> app;
+  }
+  node [group=obj]; o1, o2, o3, o4, o5
+
+
+
+
+}

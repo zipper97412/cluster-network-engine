@@ -1,0 +1,8 @@
+[package]
+name = "cluster-network-engine"
+version = "0.1.0"
+authors = ["zipper"]
+
+[dependencies]
+nanomsg = "0.6.2"
+serde = "1.0.9"
